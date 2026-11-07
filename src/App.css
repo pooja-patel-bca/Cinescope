@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #100d1c;
+  color: #ffffff;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  min-height: 75px;
+  padding: 18px 7%;
+  background: #191429;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #302642;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a78bfa;
+}
+
+.logo h2 {
+  color: white;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #c4bdd4;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #a78bfa;
+}
+
+.nav-watchlist {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 17px;
+  background: #7c3aed;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.nav-watchlist:hover {
+  background: #6d28d9;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  width: 86%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* HERO SECTION */
+
+.hero {
+  margin-top: 35px;
+  padding: 75px 40px;
+  text-align: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #30204f, #171329, #24143b);
+  border: 1px solid #49316b;
+}
+
+.hero-label {
+  color: #c4a5fd;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hero p:last-child {
+  color: #c4bdd4;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* MOVIES SECTION */
+
+.movies-section {
+  padding: 55px 0;
+}
+
+.movies-section h2 {
+  font-size: 27px;
+  margin-bottom: 25px;
+}
+
+/* SEARCH BAR */
+
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  background: #211a32;
+  border: 1px solid #49316b;
+  border-radius: 9px;
+  color: #a78bfa;
+  margin-bottom: 35px;
+}
+
+.search-bar input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+}
+
+.search-bar input::placeholder {
+  color: #9289a5;
+}
+
+/* MOVIE GRID */
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.movie-card {
+  overflow: hidden;
+  background: #1d172c;
+  border: 1px solid #352846;
+  border-radius: 13px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  border-color: #8b5cf6;
+}
+
+.movie-poster {
+  display: block;
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 18px;
+}
+
+.movie-info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.movie-info p {
+  color: #aaa0bc;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #facc15;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.movie-info button,
+.details-info button {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: #7c3aed;
+  color: white;
+  border-radius: 7px;
+  font-size: 13px;
+  margin-top: 9px;
+}
+
+.movie-info button:hover,
+.details-info button:hover {
+  background: #6d28d9;
+}
+
+.movie-info .details-button {
+  background: #302642;
+  border: 1px solid #49316b;
+}
+
+.movie-info .details-button:hover {
+  background: #44315e;
+}
+
+.no-movies {
+  color: #b8adc9;
+  padding: 20px 0;
+}
+
+/* DETAILS PAGE */
+
+.details-page {
+  width: 86%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #302642;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.back-button:hover {
+  background: #49316b;
+}
+
+.details-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 45px;
+  align-items: center;
+  background: #1d172c;
+  border: 1px solid #352846;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.details-container img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.details-info h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.details-genre {
+  color: #c4a5fd;
+  margin-bottom: 18px;
+}
+
+.details-info h3 {
+  margin: 25px 0 12px;
+}
+
+.details-info>p:not(.details-genre) {
+  color: #b8adc9;
+  line-height: 1.8;
+}
+
+.details-info button {
+  max-width: 230px;
+  margin-top: 25px;
+}
+
+/* WATCHLIST PAGE */
+
+.watchlist-page {
+  width: 86%;
+  max-width: 1300px;
+  margin: 40px auto;
+}
+
+.watchlist-page h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.watchlist-page>p {
+  color: #b8adc9;
+  margin-bottom: 30px;
+}
+
+.watchlist-page .movie-grid>div {
+  min-width: 0;
+}
+
+.remove-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px;
+  margin-top: 9px;
+  background: #a83250;
+  color: white;
+  border-radius: 7px;
+}
+
+.remove-button:hover {
+  background: #c0264d;
+}
+
+.empty-watchlist {
+  padding: 35px;
+  background: #1d172c;
+  border: 1px solid #352846;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a,
+  .nav-watchlist {
+    font-size: 12px;
+  }
+
+  .main-content,
+  .details-page,
+  .watchlist-page {
+    width: 92%;
+  }
+
+  .hero {
+    padding: 50px 18px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .hero p:last-child {
+    font-size: 13px;
+  }
+
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-poster {
+    height: 350px;
+  }
+
+  .details-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .details-container img {
+    max-height: 400px;
+  }
+
+  .details-info h1 {
+    font-size: 27px;
+  }
+}
